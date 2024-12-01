@@ -20,14 +20,13 @@ We have built a Python-based application structured on the MVC (Model-View-Contr
 
 - Extensible Architecture: Services and models are designed to be modular, making the system easy to maintain and expand.
 
-- By leveraging Python, Flask, and Docker, this project demonstrates an efficient and modern solution to parking management challenges in high-traffic shopping malls.
+By leveraging Python, Flask, and Docker, this project demonstrates an efficient and modern solution to parking management challenges in high-traffic shopping malls.
 
 # Setup Instructions
 
 ### Clone the Repository First, clone the repository to your local machine:
 ```
-git clone <repository_url>
-cd <repository_directory>
+git clone https://github.com/gabrielhsdev/pythonParkingSpot
 ````
 
 ### Build and Start the Containers In the project directory 
