@@ -39,9 +39,9 @@ This will build the Docker images for both the app and MySQL. Also, it creates t
 
 Start the containers for both services.
 
-Access the Application Once the containers are up and running, you can access the Flask application at:
+Access the Application Once the containers are up and running, you can access the Flask application using postman files on the repo.
 ```
-http://127.0.0.1:5001/api/example?name=YourName
+V1.postman_collection.json
 ```
 This URL exposes an example endpoint from the application.
 
