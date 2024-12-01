@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "600f2f76-20aa-4f41-aa20-5eaa7680c4bc",
+		"name": "Arquitetura De Software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30959634"
+	},
+	"item": [
+		{
+			"name": "Floors",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:5001/api/floors/"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:5001/api/floors/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"floor_number\": 4,\n    \"floor_name\": \"Floor 4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:5001/api/floors/"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"floor_number\": 4,\n    \"floor_name\": \"Floor 4 Updated 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:5001/api/floors/1"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:5001/api/floors/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parking Spots",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:5001/api/parking-spots/"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:5001/api/parking-spots/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Is Avaliable ( Service )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:5001/api/parking-spots/isAvailable/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"floor_id\": 1,\n    \"spot_number\": \"NewSpot\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:5001/api/parking-spots/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"floor_id\": 1,\n    \"spot_number\": \"A1 Updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:5001/api/parking-spots/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:5001/api/parking-spots/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:5001/api/cars/"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id ( All )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:5001/api/cars/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Parked",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:5001/api/cars/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"license_plate\": \"Only Car\",\n    \"parking_spot_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5001/api/cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Car Leave",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"license_plate\": \"Only Car\",\n    \"spot_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5001/api/cars/1/leave_at"
+					},
+					"response": []
+				},
+				{
+					"name": "Change Spot",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spot_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5001/api/cars/1/parking_spot"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car Log",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:5001/api/cars/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

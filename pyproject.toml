@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "POC MVC"
+version = "0.1.0"
+description = "Prova de conceito com estrutura MVC"
+authors = ["henriquegabrielhs21@gmail.com"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^2.3"
+flask-cors = "^3.1"  # Correct placement here
+
+[tool.mypy]
+strict = true
+exclude = ["tests/*"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5001:5001"  # Map the container's port 5001 to the host's port 5001
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=main
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: main
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d  
