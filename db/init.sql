@@ -58,6 +58,3 @@ INSERT INTO parking_spots (floor_id, spot_number) VALUES
     (3, 'C3'),
     (3, 'C4'),
     (3, 'C5');
-
-
-

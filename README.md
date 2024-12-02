@@ -53,3 +53,14 @@ Username: root
 Password: root
 Database: main
 ````
+
+### Unit Testing
+
+For the unit tests, you can run the command 
+````
+python -m unittest -v tests.car_model_test
+python -m unittest -v tests.floor_model_test  
+python -m unittest -v tests.parking_spot_model_test
+````
+
+- Change ```car_model_test```and select the desire unit test, in this case, only models were unit tested.
